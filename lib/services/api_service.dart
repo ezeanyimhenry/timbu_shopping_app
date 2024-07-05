@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import '../models/product.dart';
 
 class ApiService {
   final String apiUrl = "https://api.timbu.cloud/v1/products";
-  final String apiKey = "YOUR_API_KEY"; // Replace with your actual API key
+  final String apiKey = dotenv.env['TIMBU_API_KEY']!;
 
   Future<List<Product>> fetchProducts() async {
     final response = await http.get(
