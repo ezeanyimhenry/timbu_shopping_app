@@ -14,7 +14,8 @@ This is a Flutter-based mobile application that allows users to browse and purch
 
 ## Screenshots
 
-Include screenshots of your app here.
+<img src="assets/home-screen.png" alt="Products Screen" width="300">
+<img src="assets/product-detail.png" alt="Checkout Screen" width="300">
 
 ## Installation
 
@@ -23,8 +24,8 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/shopping-app.git
-    cd shopping-app
+    git clone https://github.com/ezeanyimhenry/timbu_shopping_app.git
+    cd timbu_shopping_app
     ```
 
 2. **Install dependencies:**
