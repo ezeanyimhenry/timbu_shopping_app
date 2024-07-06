@@ -75,10 +75,10 @@ Contributions are welcome! Please fork this repository and submit a pull request
 ## Download the Demo
 
 ### APK Download
-- [Download APK](https://drive.google.com/file/d/1i_L45AoqwQIHFVaFENX6s-GYHZnGiIJc/view?usp=sharing)
+- [Download APK](https://drive.google.com/file/d/1HsDJj9GpxtaOtF9sWHrQx9jJetIzp21e/view?usp=sharing)
 
 ### Appetize.io Demo
-- [Open Appetize.io Demo](https://appetize.io/app/54lf4lgii7hftqbutw7vqqcjoa?device=pixel7&osVersion=13.0)
+- [Open Appetize.io Demo](https://appetize.io/app/android/com.example.timbu_shopping_app?device=pixel7&osVersion=13.0)
 
 ## License
 
