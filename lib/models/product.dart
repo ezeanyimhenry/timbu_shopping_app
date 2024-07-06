@@ -1,22 +1,30 @@
 class Product {
-  final String id;
   final String name;
-  final String imageUrl;
   final String description;
+  final String uniqueId;
+  final bool isAvailable;
+  final String imageUrl;
 
   Product({
-    required this.id,
     required this.name,
-    required this.imageUrl,
-    required this.description,
+    this.description = '',
+    required this.uniqueId,
+    required this.isAvailable,
+    this.imageUrl = '',
   });
 
   factory Product.fromJson(Map<String, dynamic> json) {
+    String imageUrl = '';
+    if (json['photos'] != null && json['photos'].isNotEmpty) {
+      imageUrl = json['photos'][0]['url'];
+    }
+
     return Product(
-      id: json['id'],
       name: json['name'],
-      imageUrl: json['imageUrl'],
-      description: json['description'],
+      description: json['description'] ?? '',
+      uniqueId: json['unique_id'],
+      isAvailable: json['is_available'],
+      imageUrl: imageUrl,
     );
   }
 }

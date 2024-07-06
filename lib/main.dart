@@ -5,7 +5,12 @@ import 'providers/product_provider.dart';
 import 'screens/main_screen.dart';
 
 Future<void> main() async {
-  await dotenv.load(fileName: ".env");
+  try {
+    await dotenv.load(fileName: ".env");
+    print("Env file loaded successfully");
+  } catch (e) {
+    print("Error loading .env file: $e");
+  }
   runApp(MyApp());
 }
 
