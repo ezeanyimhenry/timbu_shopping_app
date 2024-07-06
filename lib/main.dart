@@ -7,9 +7,9 @@ import 'screens/main_screen.dart';
 Future<void> main() async {
   try {
     await dotenv.load(fileName: ".env");
-    print("Env file loaded successfully");
+    // print("Env file loaded successfully");
   } catch (e) {
-    print("Error loading .env file: $e");
+    // print("Error loading .env file: $e");
   }
   runApp(MyApp());
 }
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => ProductProvider()..fetchProducts(),
       child: MaterialApp(
-        title: 'Timbu App',
+        title: 'Timbu Shopping App',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

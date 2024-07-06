@@ -3,6 +3,7 @@ class Product {
   final String description;
   final String uniqueId;
   final bool isAvailable;
+  final double price;
   final String imageUrl;
 
   Product({
@@ -10,6 +11,7 @@ class Product {
     this.description = '',
     required this.uniqueId,
     required this.isAvailable,
+    this.price = 0.00,
     this.imageUrl = '',
   });
 
@@ -23,11 +25,30 @@ class Product {
       }
     }
 
+// Extract price from current_price field
+    double extractedPrice = 0.00;
+    if (json.containsKey('current_price')) {
+      List<dynamic> currentPrice = json['current_price'];
+      if (currentPrice.isNotEmpty) {
+        // Assume the first element is the price for simplicity
+        dynamic priceValue = currentPrice[0];
+        if (priceValue is Map<String, dynamic> &&
+            priceValue.containsKey('NGN')) {
+          // Assuming NGN is the currency you are interested in
+          List<dynamic> ngnValues = priceValue['NGN'];
+          if (ngnValues.isNotEmpty && ngnValues[0] is double) {
+            extractedPrice = ngnValues[0];
+          }
+        }
+      }
+    }
+
     return Product(
       name: json['name'],
       description: json['description'] ?? '',
       uniqueId: json['unique_id'],
       isAvailable: json['is_available'],
+      price: extractedPrice,
       imageUrl: imageUrl,
     );
   }

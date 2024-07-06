@@ -42,7 +42,7 @@ class ApiService {
             "Failed to load products: ${response.statusCode} - ${response.body}");
       }
     } catch (e) {
-      // print("Error during API call: $e");
+      print("Error during API call: $e");
       throw Exception("Failed to load products");
     }
   }
