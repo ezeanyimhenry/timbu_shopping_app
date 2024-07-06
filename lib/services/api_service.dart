@@ -11,10 +11,10 @@ class ApiService {
 
   Future<List<Product>> fetchProducts(
       {int page = 1, int size = 10, bool reverseSort = false}) async {
-    print("API URL: $apiUrl");
-    print("API Key: $apiKey");
-    print("App ID: $appId");
-    print("Organization ID: $organizationId");
+    // print("API URL: $apiUrl");
+    // print("API Key: $apiKey");
+    // print("App ID: $appId");
+    // print("Organization ID: $organizationId");
 
     if (apiKey.isEmpty || appId.isEmpty || organizationId.isEmpty) {
       throw Exception("API Key, App ID, or Organization ID is not set");
@@ -26,8 +26,8 @@ class ApiService {
             "$apiUrl?organization_id=$organizationId&reverse_sort=$reverseSort&page=$page&size=$size&Appid=$appId&Apikey=$apiKey"),
       );
 
-      print("Response status: ${response.statusCode}");
-      print("Response body: ${response.body}");
+      // print("Response status: ${response.statusCode}");
+      // print("Response body: ${response.body}");
 
       if (response.statusCode == 200) {
         Map<String, dynamic> data = json.decode(response.body);
@@ -42,7 +42,7 @@ class ApiService {
             "Failed to load products: ${response.statusCode} - ${response.body}");
       }
     } catch (e) {
-      print("Error during API call: $e");
+      // print("Error during API call: $e");
       throw Exception("Failed to load products");
     }
   }

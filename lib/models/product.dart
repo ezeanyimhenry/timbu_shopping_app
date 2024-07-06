@@ -17,6 +17,10 @@ class Product {
     String imageUrl = '';
     if (json['photos'] != null && json['photos'].isNotEmpty) {
       imageUrl = json['photos'][0]['url'];
+      // Check if the URL is relative and make it absolute
+      if (!imageUrl.startsWith('http')) {
+        imageUrl = 'https://api.timbu.cloud/images/$imageUrl';
+      }
     }
 
     return Product(
