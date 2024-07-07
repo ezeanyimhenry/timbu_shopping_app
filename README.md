@@ -78,7 +78,7 @@ Contributions are welcome! Please fork this repository and submit a pull request
 - [Download APK](https://drive.google.com/file/d/1HsDJj9GpxtaOtF9sWHrQx9jJetIzp21e/view?usp=sharing)
 
 ### Appetize.io Demo
-- [Open Appetize.io Demo](https://appetize.io/app/android/com.example.timbu_shopping_app?device=pixel7&osVersion=13.0)
+- [Open Appetize.io Demo](https://appetize.io/embed/b_n4bsd3ign3vumrpwt7ghux7yku)
 
 ## License
 
